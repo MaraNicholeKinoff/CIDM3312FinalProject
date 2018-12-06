@@ -24,6 +24,9 @@
             <th class="text-white">
                 @Html.DisplayNameFor(model => model.Email)
             </th>
+            <th class="text-white">
+                @Html.DisplayNameFor(model => model.OrganizationName)
+            </th>
             <th></th>
         </tr>
     </thead>
@@ -41,6 +44,9 @@
             </td>
             <td class="text-white">
                 @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td class="text-white">
+                @Html.DisplayFor(modelItem => item.OrganizationName)
             </td>
             <td class="text-white">
                 <a class="text-success" asp-action="Edit" asp-route-id="@item.ClientID">Edit</a> |

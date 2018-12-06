@@ -119,7 +119,7 @@ namespace CIDM3312Project.Models
                         },
                         new Project() 
                         {
-                            ProjectName = "Fix Existing Website",
+                            ProjectName = "Fix Existing Database",
                             EstimatedHours = 300,
                             Deadline = "12/15/2018"
                         }
@@ -137,15 +137,15 @@ namespace CIDM3312Project.Models
                             LastName = "Smith", 
                             PhoneNumber = "987-654-3210", 
                             Email = "john@someemail.com",
-                            OrganizationName = "Apple, Inc."
+                            OrganizationName = "Apple"
                         },
                         new Client() 
                         {
                             FirstName = "Jane", 
-                            LastName = "Smith", 
+                            LastName = "Doe", 
                             PhoneNumber = "654-987-3210", 
                             Email = "jane@someemail.com",
-                             OrganizationName = "Microsoft"
+                            OrganizationName = "Microsoft"
                         }
                     };
                     context.Client.AddRange(clients);                    
