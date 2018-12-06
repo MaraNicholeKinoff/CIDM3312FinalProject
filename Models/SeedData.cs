@@ -107,36 +107,6 @@ namespace CIDM3312Project.Models
                     context.Member.AddRange(members);                    
                     context.SaveChanges();
                 }
-                if(!context.Organization.Any()) 
-                {
-                    List<Organization> org = new List<Organization>()
-                    {
-                        new Organization() 
-                        {
-                            OrganizationName = "A Company",
-                            PhoneNumber = "012-345-6789",
-                            Email = "acompanyn@email.com",
-                            AddLine1 = "123 West Ave",
-                            AddLine2 = "Suite 101",
-                            City = "Amarillo",
-                            Zipcode = "77777",
-                            State = "TX"
-                        },
-                        new Organization() 
-                        {
-                            OrganizationName = "B Company",
-                            PhoneNumber = "122-333-4444",
-                            Email = "bcompanyn@email.com",
-                            AddLine1 = "123 East Ave",
-                            AddLine2 = "",
-                            City = "Amarillo",
-                            Zipcode = "77777",
-                            State = "TX"
-                        }
-                    };
-                    context.Organization.AddRange(org);                    
-                    context.SaveChanges();
-                }
                 if(!context.Project.Any()) 
                 {
                     List<Project> project = new List<Project>()
@@ -144,13 +114,13 @@ namespace CIDM3312Project.Models
                         new Project() 
                         {
                             ProjectName = "New Website",
-                            EstimatedHours = 40,
+                            EstimatedHours = 400,
                             Deadline = "12/12/2018"
                         },
                         new Project() 
                         {
                             ProjectName = "Fix Existing Website",
-                            EstimatedHours = 30,
+                            EstimatedHours = 300,
                             Deadline = "12/15/2018"
                         }
                     };
@@ -166,120 +136,19 @@ namespace CIDM3312Project.Models
                             FirstName = "John", 
                             LastName = "Smith", 
                             PhoneNumber = "987-654-3210", 
-                            Email = "john@someemail.com"
+                            Email = "john@someemail.com",
+                            OrganizationName = "Apple, Inc."
                         },
                         new Client() 
                         {
                             FirstName = "Jane", 
                             LastName = "Smith", 
                             PhoneNumber = "654-987-3210", 
-                            Email = "jane@someemail.com"
+                            Email = "jane@someemail.com",
+                             OrganizationName = "Microsoft"
                         }
                     };
                     context.Client.AddRange(clients);                    
-                    context.SaveChanges();
-                }
-
-                if(!context.Team.Any())
-                {
-                    List<Team> teams = new List<Team>()
-                    {
-                        new Team() 
-                        {
-                            TeamName = "Team Alpha"
-                        },
-                        new Team() 
-                        {
-                            TeamName = "Team Beta"
-                        }
-                    };
-                    context.Team.AddRange(teams);                    
-                    context.SaveChanges();
-                }
-                if(!context.ClientOrganization.Any())
-                {
-                    List<ClientOrganization> corgs = new List<ClientOrganization>()
-                    {
-                        new ClientOrganization() 
-                        {
-                            ClientID = 1,
-                            OrganizationID = 1,
-                        },
-                        new ClientOrganization() 
-                        {
-                            ClientID = 2,
-                            OrganizationID = 2,
-                        }
-                    };
-                    context.ClientOrganization.AddRange(corgs);                    
-                    context.SaveChanges();
-                }
-                if(!context.TeamMembers.Any())
-                {
-                    List<TeamMembers> teams = new List<TeamMembers>()
-                    {
-                        new TeamMembers() 
-                        {
-                            StudentID = 1,
-                            TeamID = 1,
-                            Role = "Front End Developer"
-                        },
-                        new TeamMembers() 
-                        {
-                            StudentID = 2,
-                            TeamID = 1,
-                            Role = "Coder"
-                        },
-                        new TeamMembers() 
-                        {
-                            StudentID = 3,
-                            TeamID = 1,
-                            Role = "Coder"
-                        },
-                        new TeamMembers() 
-                        {
-                            StudentID = 4,
-                            TeamID = 1,
-                            Role = "Project Coordinator"
-                        },
-                        new TeamMembers() 
-                        {
-                            StudentID = 5,
-                            TeamID = 1,
-                            Role = "Back End Developer"
-                        },
-                        new TeamMembers() 
-                        {
-                            StudentID = 6,
-                            TeamID = 2,
-                            Role = "Front End Developer"
-                        },
-                        new TeamMembers() 
-                        {
-                            StudentID = 7,
-                            TeamID = 2,
-                            Role = "Coder"
-                        },
-                        new TeamMembers() 
-                        {
-                            StudentID = 8,
-                            TeamID = 2,
-                            Role = "Coder"
-                        },
-                        new TeamMembers() 
-                        {
-                            StudentID = 9,
-                            TeamID = 2,
-                            Role = "Project Coordinator"
-                        },
-                        new TeamMembers() 
-                        {
-                            StudentID = 10,
-                            TeamID = 1,
-                            Role = "Back End Developer"
-                        },
-                    };
-                    context.TeamMembers.AddRange(teams);                    
                     context.SaveChanges();
                 }
                 if(!context.ProjectDetails.Any()) 
@@ -290,13 +159,11 @@ namespace CIDM3312Project.Models
                         {
                             ProjectID = 1,
                             ClientID = 1,
-                            TeamID = 1
                         },
                         new ProjectDetails() 
                         {
                             ProjectID = 2,
                             ClientID = 2,
-                            TeamID = 2
                         }
                     };
                     context.ProjectDetails.AddRange(projectdetails);                    
