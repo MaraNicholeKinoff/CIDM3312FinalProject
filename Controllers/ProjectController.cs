@@ -21,6 +21,8 @@ namespace CIDM3312Project.Controllers
         // GET: Project
         public async Task<IActionResult> Index()
         {
+            // var project = await _context.Project();
+            // var projDetails = Logic.Sorting.ProjectJoinMembersClients(_context, project);
             return View(await _context.Project.ToListAsync());
         }
 

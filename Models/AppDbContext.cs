@@ -21,13 +21,12 @@ namespace CIDM3312Project.Models
         public DbSet<Member> Member { get; set; }
         public DbSet<Client> Client { get; set; }
         public DbSet<Project> Project { get; set; }
-        public DbSet<ProjectDetails> ProjectDetails { get; set; }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            modelBuilder.Entity<ProjectDetails>()
-                .HasKey(pd => new { pd.ClientID, pd.ProjectID });
-        }
+        // protected override void OnModelCreating(ModelBuilder modelBuilder)
+        // {
+        //     modelBuilder.Entity<ProjectDetails>()
+        //         .HasKey(pd => new { pd.ClientID, pd.ProjectID });
+        // }
     }
 
 }

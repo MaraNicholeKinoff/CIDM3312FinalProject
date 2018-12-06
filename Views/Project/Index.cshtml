@@ -21,6 +21,9 @@
             <th class="text-white">
                 @Html.DisplayNameFor(model => model.Deadline)
             </th>
+            <th class="text-white">
+                @Html.DisplayNameFor(model => model.Members)
+            </th>
             <th></th>
         </tr>
     </thead>
@@ -35,6 +38,9 @@
             </td>
             <td class="text-white">
                 @Html.DisplayFor(modelItem => item.Deadline)
+            </td>
+            <td class="text-white">
+                @Html.DisplayFor(modelItem => item.Members)
             </td>
             <td class="text-white">
                 <a class="text-success" asp-action="Edit" asp-route-id="@item.ProjectID">Edit</a> |

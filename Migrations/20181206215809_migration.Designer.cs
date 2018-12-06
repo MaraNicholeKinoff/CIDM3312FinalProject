@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CIDM3312Project.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20181206213704_migration")]
+    [Migration("20181206215809_migration")]
     partial class migration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -53,13 +53,11 @@ namespace CIDM3312Project.Migrations
 
                     b.Property<string>("PhoneNumber");
 
-                    b.Property<int?>("ProjectDetailsClientID");
-
-                    b.Property<int?>("ProjectDetailsProjectID");
+                    b.Property<int?>("ProjectID");
 
                     b.HasKey("MemberID");
 
-                    b.HasIndex("ProjectDetailsClientID", "ProjectDetailsProjectID");
+                    b.HasIndex("ProjectID");
 
                     b.ToTable("Member");
                 });
@@ -80,37 +78,11 @@ namespace CIDM3312Project.Migrations
                     b.ToTable("Project");
                 });
 
-            modelBuilder.Entity("CIDM3312Project.Models.ProjectDetails", b =>
-                {
-                    b.Property<int>("ClientID");
-
-                    b.Property<int>("ProjectID");
-
-                    b.HasKey("ClientID", "ProjectID");
-
-                    b.HasIndex("ProjectID");
-
-                    b.ToTable("ProjectDetails");
-                });
-
             modelBuilder.Entity("CIDM3312Project.Models.Member", b =>
                 {
-                    b.HasOne("CIDM3312Project.Models.ProjectDetails")
+                    b.HasOne("CIDM3312Project.Models.Project")
                         .WithMany("Members")
-                        .HasForeignKey("ProjectDetailsClientID", "ProjectDetailsProjectID");
-                });
-
-            modelBuilder.Entity("CIDM3312Project.Models.ProjectDetails", b =>
-                {
-                    b.HasOne("CIDM3312Project.Models.Client", "Client")
-                        .WithMany()
-                        .HasForeignKey("ClientID")
-                        .OnDelete(DeleteBehavior.Cascade);
-
-                    b.HasOne("CIDM3312Project.Models.Project", "Project")
-                        .WithMany()
-                        .HasForeignKey("ProjectID")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("ProjectID");
                 });
 #pragma warning restore 612, 618
         }

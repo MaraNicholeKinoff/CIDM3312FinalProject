@@ -62,7 +62,7 @@ using CIDM3312Project.Models;
             WriteLiteral("\r\n\r\n<div class=\"p-3 mb-2 bg-secondary text-white\">\r\n    ");
             EndContext();
             BeginContext(101, 72, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "97c89ca8bcd14a93b489c02a1e285399", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "0e8d960cb894400b9ece86fc0d47be67", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();

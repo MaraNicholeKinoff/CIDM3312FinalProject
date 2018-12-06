@@ -29,7 +29,7 @@ namespace CIDM3312Project.Models
                             LastName = "Kinoff", 
                             PhoneNumber = "012-345-6789", 
                             Email = "marak@email.com", 
-                            Major = "CIS" 
+                            Major = "CIS",
                         },
                         new Member() 
                         {
@@ -115,13 +115,60 @@ namespace CIDM3312Project.Models
                         {
                             ProjectName = "New Website",
                             EstimatedHours = 400,
-                            Deadline = "12/12/2018"
+                            Deadline = "12/12/2018",
+                            Members = new List<Member>() {
+                                new Member(){
+                                    MemberID = 1,
+                                    FirstName = "Mara",
+                                    LastName = "Kinoff"
+                                },
+                                new Member(){
+                                    MemberID = 2,
+                                    FirstName = "Sean",
+                                    LastName = "Kinoff"
+                                },
+                                new Member(){
+                                    MemberID = 3,
+                                    FirstName = "Amy",
+                                    LastName = "Saysouriyosack"
+                                },
+                                new Member(){
+                                    FirstName = "John",
+                                    LastName = "Cunningham"
+                                },
+                                new Member(){
+                                    FirstName = "Vanessa",
+                                    LastName = "Valenzuela"
+                                }
+                            }
                         },
                         new Project() 
                         {
                             ProjectName = "Fix Existing Database",
                             EstimatedHours = 300,
-                            Deadline = "12/15/2018"
+                            Deadline = "12/15/2018",
+                            Members = new List<Member>() {
+                                new Member(){
+                                    FirstName = "Claudia",
+                                    LastName = "Silva"
+                                },
+                                new Member(){
+                                    FirstName = "Catherine",
+                                    LastName = "McGovern"
+                                },
+                                new Member(){
+                                    FirstName = "Kayla",
+                                    LastName = "Washington"
+                                },
+                                new Member(){
+                                    FirstName = "Cory",
+                                    LastName = "Williams"
+                                },
+                                new Member(){
+                                    FirstName = "Michael",
+                                    LastName = "Mathews"
+                                }
+                            }
                         }
                     };
                     context.Project.AddRange(project);                    
@@ -151,25 +198,6 @@ namespace CIDM3312Project.Models
                     context.Client.AddRange(clients);                    
                     context.SaveChanges();
                 }
-                if(!context.ProjectDetails.Any()) 
-                {
-                    List<ProjectDetails> projectdetails = new List<ProjectDetails>()
-                    {
-                        new ProjectDetails() 
-                        {
-                            ProjectID = 1,
-                            ClientID = 1,
-                        },
-                        new ProjectDetails() 
-                        {
-                            ProjectID = 2,
-                            ClientID = 2,
-                        }
-                    };
-                    context.ProjectDetails.AddRange(projectdetails);                    
-                    context.SaveChanges();
-                }
-            }
-        
+            }        
     }
 }

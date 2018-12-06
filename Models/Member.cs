@@ -13,6 +13,6 @@ namespace CIDM3312Project.Models
         
         public override string ToString(){
             return "Student " + this.MemberID + ": " + this.FirstName + " " + this.LastName + " - " + this.Major;
-}
+        }
     }
 }
