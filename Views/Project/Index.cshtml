@@ -4,21 +4,21 @@
     ViewData["Title"] = "Index";
 }
 
-<h2>Current Projects</h2>
+<h2 class="text-white">Current Projects</h2>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a class="text-success" asp-action="Create">Create New</a>
 </p>
 <table class="table">
     <thead>
         <tr>
-            <th>
+            <th class="text-white">
                 @Html.DisplayNameFor(model => model.ProjectName)
             </th>
-            <th>
+            <th class="text-white"> 
                 @Html.DisplayNameFor(model => model.EstimatedHours)
             </th>
-            <th>
+            <th class="text-white">
                 @Html.DisplayNameFor(model => model.Deadline)
             </th>
             <th></th>
@@ -27,19 +27,19 @@
     <tbody>
 @foreach (var item in Model) {
         <tr>
-            <td>
+            <td class="text-white">
                 @Html.DisplayFor(modelItem => item.ProjectName)
             </td>
-            <td>
+            <td class="text-white">
                 @Html.DisplayFor(modelItem => item.EstimatedHours)
             </td>
-            <td>
+            <td class="text-white">
                 @Html.DisplayFor(modelItem => item.Deadline)
             </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.ProjectID">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.ProjectID">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.ProjectID">Delete</a>
+            <td class="text-white">
+                <a class="text-success" asp-action="Edit" asp-route-id="@item.ProjectID">Edit</a> |
+                <a class="text-success" asp-action="Details" asp-route-id="@item.ProjectID">Details</a> |
+                <a class="text-success" asp-action="Delete" asp-route-id="@item.ProjectID">Delete</a>
             </td>
         </tr>
 }

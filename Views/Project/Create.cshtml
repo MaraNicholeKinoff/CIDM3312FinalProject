@@ -4,26 +4,25 @@
     ViewData["Title"] = "Create";
 }
 
-<h2>Create</h2>
+<h2 class="text-white">Create a Project</h2>
 
-<h4>Project</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="ProjectName" class="control-label"></label>
+                <label class="text-white" asp-for="ProjectName" class="control-label"></label>
                 <input asp-for="ProjectName" class="form-control" />
                 <span asp-validation-for="ProjectName" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="EstimatedHours" class="control-label"></label>
+                <label class="text-white" asp-for="EstimatedHours" class="control-label"></label>
                 <input asp-for="EstimatedHours" class="form-control" />
                 <span asp-validation-for="EstimatedHours" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Deadline" class="control-label"></label>
+                <label class="text-white" asp-for="Deadline" class="control-label"></label>
                 <input asp-for="Deadline" class="form-control" />
                 <span asp-validation-for="Deadline" class="text-danger"></span>
             </div>
@@ -34,8 +33,8 @@
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
+<div class="text-white">
+    <a class="text-success" asp-action="Index">Back to List</a>
 </div>
 
 @section Scripts {
