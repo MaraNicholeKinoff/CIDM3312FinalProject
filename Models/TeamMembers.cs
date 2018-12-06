@@ -2,7 +2,7 @@ using System;
 
 namespace CIDM3312Project.Models
 {
-    public class StudentTeams
+    public class TeamMembers
     {
         public int TeamID { get; set; }
         public int StudentID{ get; set; }
