@@ -67,3 +67,13 @@ C:\Users\mara\Documents\CIDM3312\FinalProject\obj\Debug\netcoreapp2.1\Razor\View
 C:\Users\mara\Documents\CIDM3312\FinalProject\obj\Debug\netcoreapp2.1\Razor\Views\Member\Details.g.cshtml.cs
 C:\Users\mara\Documents\CIDM3312\FinalProject\obj\Debug\netcoreapp2.1\Razor\Views\Member\Edit.g.cshtml.cs
 C:\Users\mara\Documents\CIDM3312\FinalProject\obj\Debug\netcoreapp2.1\Razor\Views\Member\Index.g.cshtml.cs
+C:\Users\mara\Documents\CIDM3312\FinalProject\obj\Debug\netcoreapp2.1\Razor\Views\Client\Create.g.cshtml.cs
+C:\Users\mara\Documents\CIDM3312\FinalProject\obj\Debug\netcoreapp2.1\Razor\Views\Client\Delete.g.cshtml.cs
+C:\Users\mara\Documents\CIDM3312\FinalProject\obj\Debug\netcoreapp2.1\Razor\Views\Client\Details.g.cshtml.cs
+C:\Users\mara\Documents\CIDM3312\FinalProject\obj\Debug\netcoreapp2.1\Razor\Views\Client\Edit.g.cshtml.cs
+C:\Users\mara\Documents\CIDM3312\FinalProject\obj\Debug\netcoreapp2.1\Razor\Views\Client\Index.g.cshtml.cs
+C:\Users\mara\Documents\CIDM3312\FinalProject\obj\Debug\netcoreapp2.1\Razor\Views\Project\Create.g.cshtml.cs
+C:\Users\mara\Documents\CIDM3312\FinalProject\obj\Debug\netcoreapp2.1\Razor\Views\Project\Delete.g.cshtml.cs
+C:\Users\mara\Documents\CIDM3312\FinalProject\obj\Debug\netcoreapp2.1\Razor\Views\Project\Details.g.cshtml.cs
+C:\Users\mara\Documents\CIDM3312\FinalProject\obj\Debug\netcoreapp2.1\Razor\Views\Project\Edit.g.cshtml.cs
+C:\Users\mara\Documents\CIDM3312\FinalProject\obj\Debug\netcoreapp2.1\Razor\Views\Project\Index.g.cshtml.cs

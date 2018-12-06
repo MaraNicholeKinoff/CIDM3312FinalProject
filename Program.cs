@@ -15,12 +15,12 @@ namespace CIDM3312Project
     {        
         public static void Main(string[] args)
         {
-            SeedData.CreateSeedData();
             CreateWebHostBuilder(args).Build().Run();
         }
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-                .UseStartup<Startup>();
+                .UseStartup<Startup>()
+                .UseDefaultServiceProvider(options => options.ValidateScopes = false);
     }
 }

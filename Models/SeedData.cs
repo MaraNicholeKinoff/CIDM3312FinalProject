@@ -3,19 +3,22 @@ using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Sqlite;
 using System.Linq;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace CIDM3312Project.Models
 {
     public class SeedData
     {
         
-        public static void CreateSeedData() {
-            using (var context = new AppDbContext()) {
+        public static void CreateSeedData(IApplicationBuilder app) {
+
+        var context = app.ApplicationServices.GetRequiredService<AppDbContext>();
+            
                 //context.Database.EnsureDeleted();
                 context.Database.EnsureCreated();
-            }
-
-            using (var context = new AppDbContext()) {
+            
+            
                 if(!context.Member.Any())
                 {
                     List<Member> members = new List<Member>()
@@ -300,6 +303,6 @@ namespace CIDM3312Project.Models
                     context.SaveChanges();
                 }
             }
-        }
+        
     }
 }

@@ -8,12 +8,15 @@ namespace CIDM3312Project.Models
     {
         private const string ConnectionString = @"Data Source=AppDb.db";
                     
+        public AppDbContext(DbContextOptions<AppDbContext> options)
+        : base(options)
+        { }
 
-        protected override void OnConfiguring(
-            DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlite(ConnectionString);
-        }
+        // protected override void OnConfiguring(
+        //     DbContextOptionsBuilder optionsBuilder)
+        // {
+        //     optionsBuilder.UseSqlite(ConnectionString);
+        // }
 
         public DbSet<Member> Member { get; set; }
         public DbSet<Client> Client { get; set; }
