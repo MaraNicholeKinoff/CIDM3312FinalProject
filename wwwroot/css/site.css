@@ -35,3 +35,7 @@ body {
         display: none;
     }
 }
+
+.jumbtron-custom{
+    background-color: #800000;
+}
