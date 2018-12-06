@@ -10,12 +10,12 @@ namespace CIDM3312Project.Models
     {
         
         public static void CreateSeedData() {
-            using (var context = new AppDBContext()) {
+            using (var context = new AppDbContext()) {
                 //context.Database.EnsureDeleted();
                 context.Database.EnsureCreated();
             }
 
-            using (var context = new AppDBContext()) {
+            using (var context = new AppDbContext()) {
                 if(!context.Member.Any())
                 {
                     List<Member> members = new List<Member>()

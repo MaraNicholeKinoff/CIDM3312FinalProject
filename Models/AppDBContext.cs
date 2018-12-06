@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Sqlite;
 
 namespace CIDM3312Project.Models
 {
-    public class AppDBContext : DbContext
+    public class AppDbContext : DbContext
     {
         private const string ConnectionString = @"Data Source=AppDb.db";
                     
