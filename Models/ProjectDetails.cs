@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace CIDM3312Project.Models
 {
@@ -8,5 +9,6 @@ namespace CIDM3312Project.Models
         public Project Project  {get; set; }
         public int ClientID { get; set; }
         public Client Client  {get; set; }
+        public List<Member> Members { get; set; }
     }
 }
