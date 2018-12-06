@@ -7,13 +7,15 @@ using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using CIDM3312Project.Models;
 
 namespace CIDM3312Project
 {
     public class Program
-    {
+    {        
         public static void Main(string[] args)
         {
+            SeedData.CreateSeedData();
             CreateWebHostBuilder(args).Build().Run();
         }
 
