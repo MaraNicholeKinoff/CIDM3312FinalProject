@@ -4,7 +4,7 @@ namespace CIDM3312Project.Models
 {
     public class FacultySponsor 
     {
-        public int ID { get; set; } 
+        public int SponsorID { get; set; } 
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string PhoneNumber { get; set; }
@@ -12,7 +12,7 @@ namespace CIDM3312Project.Models
         public string DepartmentName { get; set; }
         
         public override string ToString(){
-            return "Advisor " + this.ID + ": " + this.FirstName + " " + this.LastName + " - " + this.DepartmentName;
+            return "Advisor " + this.SponsorID + ": " + this.FirstName + " " + this.LastName + " - " + this.DepartmentName;
         }
     }
 }

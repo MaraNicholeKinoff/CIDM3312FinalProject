@@ -31,7 +31,55 @@ namespace CIDM3312Project.Models
                             StudentID = 2,
                             TeamID = 1,
                             Role = "Coder"
-                        }
+                        },
+                        new StudentTeams() 
+                        {
+                            StudentID = 3,
+                            TeamID = 1,
+                            Role = "Coder"
+                        },
+                        new StudentTeams() 
+                        {
+                            StudentID = 4,
+                            TeamID = 1,
+                            Role = "Project Coordinator"
+                        },
+                        new StudentTeams() 
+                        {
+                            StudentID = 5,
+                            TeamID = 1,
+                            Role = "Back End Developer"
+                        },
+                        new StudentTeams() 
+                        {
+                            StudentID = 6,
+                            TeamID = 2,
+                            Role = "Front End Developer"
+                        },
+                        new StudentTeams() 
+                        {
+                            StudentID = 7,
+                            TeamID = 2,
+                            Role = "Coder"
+                        },
+                        new StudentTeams() 
+                        {
+                            StudentID = 8,
+                            TeamID = 2,
+                            Role = "Coder"
+                        },
+                        new StudentTeams() 
+                        {
+                            StudentID = 9,
+                            TeamID = 2,
+                            Role = "Project Coordinator"
+                        },
+                        new StudentTeams() 
+                        {
+                            StudentID = 10,
+                            TeamID = 1,
+                            Role = "Back End Developer"
+                        },
                     };
                     context.StudentTeams.AddRange(steams);                    
                     context.SaveChanges();
@@ -48,34 +96,98 @@ namespace CIDM3312Project.Models
                         new ClientOrganization() 
                         {
                             ClientID = 2,
-                            OrganizationID = 1,
+                            OrganizationID = 2,
                         }
                     };
                     context.ClientOrganization.AddRange(corgs);                    
                     context.SaveChanges();
                 }
-                if(!context.Student.Any())
+                if(!context.Member.Any())
                 {
-                    List<Student> students = new List<Student>()
+                    List<Member> members = new List<Member>()
                     {
-                        new Student() 
+                        new Member() 
                         {
                             FirstName = "Mara", 
                             LastName = "Kinoff", 
-                            PhoneNumber = "XXX-XXX-XXXX", 
-                            Email = "mara@domain.com", 
+                            PhoneNumber = "012-345-6789", 
+                            Email = "marak@email.com", 
                             Major = "CIS" 
                         },
-                        new Student() 
+                        new Member() 
                         {
                             FirstName = "Sean", 
                             LastName = "Kinoff", 
-                            PhoneNumber = "XXX-XXX-XXXX", 
-                            Email = "sean@domain.com", 
+                            PhoneNumber = "123-456-7890", 
+                            Email = "seank@email.com", 
                             Major = "CIS" 
-                        }
+                        },
+                        new Member() 
+                        {
+                            FirstName = "Amy", 
+                            LastName = "Saysouriyosack", 
+                            PhoneNumber = "234-567-8901", 
+                            Email = "amys@email.com", 
+                            Major = "CIS" 
+                        },
+                        new Member() 
+                        {
+                            FirstName = "John", 
+                            LastName = "Cunningham", 
+                            PhoneNumber = "345-678-9012", 
+                            Email = "johnc@email.com", 
+                            Major = "CIS" 
+                        },
+                        new Member() 
+                        {
+                            FirstName = "Vanessa", 
+                            LastName = "Valenzuela", 
+                            PhoneNumber = "456-789-0123", 
+                            Email = "vanessav@email.com", 
+                            Major = "CIS" 
+                        },
+                        new Member() 
+                        {
+                            FirstName = "Michael", 
+                            LastName = "Mathews", 
+                            PhoneNumber = "567-890-1234", 
+                            Email = "michaelm@email.com", 
+                            Major = "CIS" 
+                        },
+                        new Member() 
+                        {
+                            FirstName = "Claudia", 
+                            LastName = "Silva", 
+                            PhoneNumber = "678-901-2345", 
+                            Email = "claudias@email.com", 
+                            Major = "CIS" 
+                        },
+                        new Member() 
+                        {
+                            FirstName = "Catherine", 
+                            LastName = "McGovern", 
+                            PhoneNumber = "789-012-3456", 
+                            Email = "catherinem@email.com", 
+                            Major = "CIS" 
+                        },
+                        new Member() 
+                        {
+                            FirstName = "Kayla", 
+                            LastName = "Washington", 
+                            PhoneNumber = "890-123-4567", 
+                            Email = "kaylaw@email.com", 
+                            Major = "CIS" 
+                        },
+                        new Member() 
+                        {
+                            FirstName = "Cory", 
+                            LastName = "Williams", 
+                            PhoneNumber = "901-234-5678", 
+                            Email = "coryw@email.com", 
+                            Major = "CIS" 
+                        },
                     };
-                    context.Student.AddRange(students);                    
+                    context.Member.AddRange(members);                    
                     context.SaveChanges();
                 }
                 if(!context.Client.Any())
@@ -86,16 +198,16 @@ namespace CIDM3312Project.Models
                         {
                             FirstName = "John", 
                             LastName = "Smith", 
-                            PhoneNumber = "XXX-XXX-XXXX", 
-                            Email = "john@domain.com", 
+                            PhoneNumber = "987-654-3210", 
+                            Email = "john@someemail.com", 
                             OrganizationID = 1
                         },
                         new Client() 
                         {
                             FirstName = "Jane", 
                             LastName = "Smith", 
-                            PhoneNumber = "XXX-XXX-XXXX", 
-                            Email = "jane@domain.com", 
+                            PhoneNumber = "654-987-3210", 
+                            Email = "jane@someemail.com", 
                             OrganizationID = 2
                         }
                     };
@@ -175,7 +287,32 @@ namespace CIDM3312Project.Models
                     context.Organization.AddRange(org);                    
                     context.SaveChanges();
                 }
-
+                if(!context.Project.Any()) 
+                {
+                    List<Project> project = new List<Project>()
+                    {
+                        new Project() 
+                        {
+                            ClientID = 1,
+                            ProjectName = "New Website",
+                            EstimatedHours = 40,
+                            Deadline = "12/12/2018",
+                            TeamID = 2,
+                            SponsorID = 1
+                        },
+                        new Project() 
+                        {
+                            ClientID = 2,
+                            ProjectName = "Fix Existing Website",
+                            EstimatedHours = 30,
+                            Deadline = "12/15/2018",
+                            TeamID = 1,
+                            SponsorID = 2
+                        }
+                    };
+                    context.Project.AddRange(project);                    
+                    context.SaveChanges();
+                }
             }
         }
     }
